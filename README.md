@@ -2,7 +2,11 @@
 
 <p align="center"> 
     <img src="./desktop.png">
+</p>
+<p align="center"> 
     <img src="./mobile1.png">
+</p>
+<p align="center"> 
     <img src="./mobilefull.png">
 </p>
 
