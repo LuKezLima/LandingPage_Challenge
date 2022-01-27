@@ -7,7 +7,7 @@
     <img src="./mobile1.png">
 </p>
 <p align="center"> 
-    <img src="./mobilefull.png">
+    <img src="./mobilefull2.png">
 </p>
 
 
