@@ -3,7 +3,7 @@
 <p align="center"> 
     <img src="./desktop.png">
     <img src="./mobile1.png">
-    <img src="./mobile2.png">
+    <img src="./mobilefull.png">
 </p>
 
 
