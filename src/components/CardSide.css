@@ -1,0 +1,71 @@
+.CardSide{
+    width: 100vw;
+    height: 75vh;
+    display: flex;
+}
+
+
+.content{
+    flex: 1 1 50%;
+    background-color: rgb(255, 255, 255);
+    padding: 0 3rem 0rem 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ImageCard{
+    flex: 1 1 50%;
+    background-size: cover;
+    background-position: center;
+}
+
+.groupContent{
+    width: 80%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 1.8rem;
+}
+
+.groupContent h2{
+    font-size: clamp(2.3rem, 2vw + .8rem, 3.5rem);
+    color: var(--Very-dark-desaturated-blue);
+}
+
+.groupContent P {
+    color: #9e9d9d;
+    font-size: clamp(1rem, 1vw + .2rem, 2rem);
+    line-height: 1.5rem;
+}
+.groupContent a {
+    color:var(--Very-dark-desaturated-blue);
+   width: fit-content;
+   font-family: 'Fraunces', serif;
+   font-weight: 900;
+}
+
+@media (max-width:768px){
+    .CardSide{
+        height: 90vh;
+        flex-direction: column-reverse !important;
+    }
+
+    .content{
+      height: 50vh;
+      padding: 2rem;
+    }
+    
+    .ImageCard{
+        height: 50vh;
+    }
+
+    .groupContent{
+        text-align: center;
+    }
+    .groupContent a{
+        margin: 0 auto;
+    }
+    
+}

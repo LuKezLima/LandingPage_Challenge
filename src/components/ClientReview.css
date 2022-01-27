@@ -1,0 +1,21 @@
+.Testimonial-Item{
+    height: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    gap: 1rem;
+}
+
+.Testimonial-Item img{
+    width: 27%;
+    border-radius: 50%;
+}
+
+.infoPerson{
+    display: flex;
+    flex-direction: column;
+    gap: .4rem;
+}
+
