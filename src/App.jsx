@@ -10,6 +10,11 @@ import CardBottom from "./components/CardBottom";
 import AppleImage from './images/desktop/image-graphic-design.jpg'
 import OrangeImage from './images/desktop/image-photography.jpg'
 import ClientReview from "./components/ClientReview";
+import DireitoTrabImg from './images/desktop/Direito-Trabalhista.jpg'
+import DireitoCivilImg from './images/desktop/direito-civil.jpg'
+import DireitoImob from './images/desktop/imob.jpg'
+import DireitoEmp from './images/desktop/direEmp.jpg'
+
 
 import EmilyPhoto from './images/image-emily.jpg'
 import ThomasPhoto from './images/image-thomas.jpg'
@@ -21,6 +26,7 @@ import gallery1 from './images/desktop/image-gallery-cone.jpg'
 import gallery2 from './images/desktop/image-gallery-milkbottles.jpg'
 import gallery3 from './images/desktop/image-gallery-orange.jpg'
 import gallery4 from './images/desktop/image-gallery-sugarcubes.jpg'
+import undraw from './images/undraw.svg'
 
 import FaceIcon from './images/icon-facebook.svg'
 import InstagramIcon from './images/icon-instagram.svg'
@@ -41,6 +47,15 @@ export default  () => {
         }
     }
 
+    const goTo = () => {
+        document.getElementById('divSeparator').scrollIntoView();
+    }
+
+    const goToAbout = () => {
+        document.getElementById('about').scrollIntoView();
+    }
+
+
 
 
     return(
@@ -50,7 +65,7 @@ export default  () => {
               
 
                     <div className="logo">
-                        <img src={Logo} alt="" />
+                        <h2>Law & Order</h2>
                     </div>
 
                     <div className="MenuHamburguer" onClick={()=> openMenu()}>
@@ -59,71 +74,82 @@ export default  () => {
                     </div>
                     <nav id="navMenu">
                         <ul>
-                            <li> <a href="">About</a> </li>
-                            <li> <a href="">Services</a> </li>
-                            <li> <a href="">Projects</a> </li>
-                            <li> <a href="" id="btnContact">CONTACT</a> </li>
+                          
+                            <li > <a onClick={goTo} href="#divSeparator">Serviços</a> </li>
+                            <li> <a onClick={goToAbout} href="#gallery">Sobre</a> </li>
+                
                         </ul>
                     </nav>
                 </header>
                 <div className="menuDisplay" id="menuMobile">
+                    
                             <ul>
-                            <li> <a href="">About</a> </li>
-                            <li> <a href="">Services</a> </li>
-                            <li> <a href="">Projects</a> </li>
-                            <li> <a href="">CONTACT</a> </li>
+                           
+                            <li> <a onClick={goTo} href="#divSeparator">Serviços</a> </li>
+                            <li> <a onClick={goToAbout} href="#gallery">Sobre</a> </li>
+
                             </ul>
                         </div>
 
                 <div className="titleBox">
-                <h1>WE ARE CREATIVES</h1>
-                <img src={Arrow} alt="arrow icon" />
+                <h1>justiça em 1° lugar</h1>
+                <h3>venha conhecer nossos serviços</h3>
+                <img src={Arrow} onClick={goTo} id='arrow2' alt="arrow icon" />
                 </div>
             
             </section>
-
-            <CardSide Title={'Transform your brand'}
-            Paragraph={'We are a full-service creative agency specializing in helping brands grow fast. Engage your clients through compelling visuals that do most of the marketing for you'}
-            Color={'var(--Yellow)'}
-            bgImage={EggImage}
+            <div id="divSeparator" className="divServices">
+            <h3 style={{fontSize:'1.3rem', textDecoration:'underline', color:'#ffffff', textShadow:'2px 1px 3px #000000'}}> NOSSOS SERVIÇOS</h3>
+            </div>
+                    
+            <CardSide Title={'Direito trabalhista'}
+            Paragraph={'A Justiça do Trabalho é a competente para julgar as causas relacionadas aos direitos trabalhistas e esses direitos são garantidos a todo trabalhador que tenha um vínculo de emprego com outra pessoa, sendo ela física ou jurídica denominada de empregador.'}
+            Color={'gray'}
+            bgImage={DireitoTrabImg}
             />
-            <CardSide Title={'Stand out to the right audience'}
-            Paragraph={'Using a collaborative formula of designers, researchers, photographers, videographers, and copywriters, we’ll build and extend your brand in digital places.'}
-            Color={'var(--Soft-red)'}
-            bgImage={PinkCupImage}
+            <CardSide Title={'DIREITO CIVIL'}
+            Paragraph={'O Direito Civil abrange um conjunto de normas que rege os direitos e os deveres das relações de ordem privada, sejam elas entre pessoas ou bens.'}
+            Color={'gray'}
+            bgImage={DireitoCivilImg}
             Orientation={'row-reverse'}
             />
 
             <div className="CardBottomBox">
-                <CardBottom bgImage={AppleImage} Title={'Graphic design'} Paragraph="Great design makes you memorable. We deliver artwork that underscores your brand message and captures potential clients’ attention."/>
-                <CardBottom bgImage={OrangeImage} Title={'Photography'} Paragraph="Increase your credibility by getting the most stunning, high-quality photos that improve your business image."/>
+                <CardBottom bgImage={DireitoImob} Title={'Direito Imobiliário'} Paragraph="O Direito Imobiliário é um dos ramos da advocacia mais procurados no Brasil, exatamente porque visa regular as relações de locação e compra/venda de imóveis dentro da legalidade."/>
+                <CardBottom bgImage={DireitoEmp} Title={'Direito Empresarial'} Paragraph="A dinâmica e estratégia de uma empresa tornam desnecessária a existência de um departamento jurídico. Contudo, com relações comerciais cada vez mais complexas, a assessoria jurídica em Direito Empresarial tem sido crucial para o êxito econômico de um negócio"/>
             </div>
+            <div className="gallery" id="about">
+                <div className="titleGal">
+                <h3>Sobre nós</h3>
+                </div>
+                <div className="imgAndP">
+                    <img src={undraw} alt="imagem " />
+                <p>A Law & Order apresenta um novo conceito de atendimento jurídico empresarial, levando ao cliente mais qualidade e maior precisão, transmitindo confiabilidade, segurança e reputação.
+Contamos com profissionais especializados e com grande experiência no mercado jurídico.
+Nossos advogados e colaboradores são escolhidos nas mais prestigiadas universidades do país e com grande conceito no mercado.
+Nossos serviços abrangem a consultoria e assessoria jurídica em Direito Empresarial, Tributário e Societário, incluindo gestão de precatórios judiciais, fusões, aquisições e incorporações empresarias, planejamento sucessório, inclusive em plataforma de Trust, reorganização societária, administração dos passivos tributários, etc.</p>
+                </div>
+               
+            </div>
+                
 
 
             <div className="ClientTestimonials">
-                <h2>Client Testimonials</h2>
+                <h2 style={{color:'#ffffff'}}>O que nossos clientes dizem</h2>
                 <div className="Testimonials">
-                    <ClientReview ClientCharge={'Marketing Director'} ClientName={'Emily R.'} ClientPhoto={EmilyPhoto} ClientReview={' We put our trust in Sunnyside and they delivered, making sure our needs were met and deadlines were always hit.'}/>
-                    <ClientReview ClientCharge={'Chief Operating Officer'} ClientName={'Thomas S.'} ClientPhoto={ThomasPhoto} ClientReview={'Sunnyside’s enthusiasm coupled with their keen interest in our brand’s success made it a satisfying and enjoyable experience.'}/>
-                    <ClientReview ClientCharge={'Business Owner'} ClientName={'Jennie F.'} ClientPhoto={JenniePhoto} ClientReview={'Incredible end result! Our sales increased over 400% when we worked with Sunnyside. Highly recommended!'}/>
+                    <ClientReview ClientName={'Maria R.'} ClientPhoto={EmilyPhoto} ClientReview={'Nós colocamos nossas confianças no trabalho da Law & Order e eles conseguiram superar nossas expectativas, serviço de qualidade e preço justo. Recomendo!'}/>
+                    <ClientReview ClientName={'Fernando S.'} ClientPhoto={ThomasPhoto} ClientReview={'Eu estava apavorado com o processo judicial que recebi, contatei a empresa e logo fui atendido com uma solução rápida e eficaz, super satisfeito...'}/>
+                    <ClientReview ClientName={'Laura F.'} ClientPhoto={JenniePhoto} ClientReview={'Todo o processo burocrático envolvendo a compra da minha casa foi resolvido pela Law & Order, eles resolveram tudo sem dor de cabeça e no final foi só pegar a chave.'}/>
                 </div>
             </div>
 
-            <div className="gallery">
-                <CardPhoto bgImage={gallery2}/>
-                <CardPhoto bgImage={gallery3}/>
-                <CardPhoto bgImage={gallery1}/>
-                <CardPhoto bgImage={gallery4}/>
-            
-            </div>
-
+         
             <footer>
                 <div className="contentFooter">
-                    <h2>sunnyside</h2>
+                    <h2>Law & Order</h2>
                     <div className="menu">
-                        <a href="">About</a>
-                        <a href="">Services</a>
-                        <a href="">Project</a>
+                        <a href="">Serviços</a>
+                        <a href="">Sobre</a>
                     </div>
                     <div className="socialMedias">
                             <img src={FaceIcon} alt="face" />

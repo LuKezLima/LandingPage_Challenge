@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 
 :root{
 --Soft-red: hsl(7, 99%, 70%);
@@ -23,13 +24,15 @@
   box-sizing: border-box;
   text-decoration: none;
   list-style: none;
+  letter-spacing: 2px;
+  scroll-behavior: smooth;
 }
 body{
 
   overflow-x: hidden;
 }
 h1, h2, h3{
-  font-family: 'Fraunces', serif;
+  font-family: 'Poppins', sans-serif;
 }
 p{
   font-family: 'Barlow', sans-serif;
@@ -41,11 +44,27 @@ p{
 #header{
   width: 100vw;
   height: 100vh;
-  background-image: url(./images/desktop/image-header.jpg);
+  background: linear-gradient(rgba(0, 0, 0, 0.74), rgba(0, 0, 0, 0.74)), url(./images/desktop/law.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 
+}
+
+#divSeparator{
+  width: 100vw;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  filter: brightness(1);
+  background-color: rgba(0, 0, 0, 0.637);
+  padding: .3rem 0;
+}
+
+.logo > h2{
+  color: #fff;
+  font-size: clamp(1rem, 1.4vw + .8rem, 2.7rem);
+  letter-spacing: 2px;
 }
 header{
   display: flex;
@@ -66,31 +85,45 @@ header nav ul li a{
 
 #btnContact{
   background-color: #fff;
-  padding: 1rem 1.8rem;
+  padding: .8rem 1.2rem;
   border-radius: 1.8rem;
   color: var(--Very-dark-desaturated-blue);
   font-weight: 700;
+  transition: filter .5s;
 }
 
 #btnContact:hover{
-  background-color: rgb(40, 241, 255);
-  color: #fff;
+    filter: brightness(.8);
 }
 
 .titleBox{
-  display: grid;
-  place-items: center;
-  margin-top: 2rem;
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+ height: 50vh;
   text-align: center;
 }
 
 .titleBox h1{
-  font-size: clamp(3rem, 3.5vw + 1.2rem, 5rem);
+  font-size: clamp(2.7rem, 4vw + 1.2rem, 5rem);
   color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.titleBox > h3 {
+  font-size: clamp(1rem, 1.4vw + .3rem, 2.5rem);
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
 
 .titleBox img{
-  margin-top: 10vh;
+  height: 15%;
+  cursor: pointer;
+  position: absolute;
+  bottom: 3rem;
 }
 
 .logo img{
@@ -111,6 +144,7 @@ header nav ul li a{
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background: linear-gradient(to right, #0f2027, #2b3538, #19191a);
 }
 
 .Testimonials{
@@ -130,19 +164,68 @@ header nav ul li a{
   opacity: .9;
 }
 .gallery{
-  height: 60vh;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100vw;
+  flex-direction: column;
+  gap: 2.2rem;
+  height: 100vh;
+
+}
+
+.titleGal{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  padding: .3rem 0;
+  filter: brightness(1);
+  background-color: rgba(0, 0, 0, 0.452);
+
+}
+
+.titleGal > h3{
+  color: rgb(255, 255, 255);
+  font-size: 1.3rem;
+  text-shadow: 2px 1px 3px #000000;
+  text-transform: uppercase;
+  text-decoration: underline;
+}
+
+.imgAndP{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.imgAndP > img{
+  width: 25%;
+}
+.imgAndP > p{
+  color: black;
+  text-align: center;
+  width: 80%;
+}
+
+
+.gallery {
+  background-image: url(./images/desktop/back.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .contentFooter{
-  height: 40vh;
-  background-color: rgb(131, 209, 166);
+  padding: 1rem 0;
+  background-color: rgb(218, 214, 214);
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1rem;
 }
 
 .contentFooter h2{
@@ -151,7 +234,7 @@ header nav ul li a{
 
 .menu{
   display: flex;
-  gap: 1.4rem;
+  gap: 1rem;
 }
 
 .menu a{
@@ -160,13 +243,12 @@ header nav ul li a{
 }
 
 .menu a:hover{
-  color: #fff;
-  opacity: 1;
+  filter: brightness(2);
 }
 
 .socialMedias{
   display: flex;
-  gap: 1.4rem;
+  gap: 1rem;
 }
 
 .socialMedias img{
@@ -178,7 +260,7 @@ header nav ul li a{
   display: none;
   width: 1.3rem;
   height: 1.3rem;
-  background-image: url(./images/icon-hamburger.svg);
+  background-image: url(./images/menu.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -189,6 +271,16 @@ header nav ul li a{
   width: 100%;
   position: absolute;
   padding: 0rem 1.2rem 0 2.5rem;
+  transition: all .7s;
+}
+
+@keyframes animation {
+  from{
+    opacity: .4;
+  }
+  to{
+    opacity: 1;
+  }
 }
 
 .menuDisplay ul{
@@ -198,22 +290,29 @@ header nav ul li a{
   justify-content: center;
   align-items: center;
   gap: 2rem;
-  height: 50vh;
+  padding-block: 1rem;
+
 
 }
 .menuDisplay ul li a{
-  color: #7e7e7e;
+  color: #000000;
   font-size: clamp(1.1rem, 1.1vw + .4rem, 2.6rem)
 }
 
 .menuDisplay ul li:last-child{
-  padding: 1rem 2rem;
-  background-color: yellow;
+  padding: .6rem 1.5rem;
+  background-color: rgb(0, 0, 0);
   border-radius: 1.5rem;
+  color: #fff !important;
 }
 .menuDisplay ul li:last-child > a{
-  color: rgb(16, 16, 99);
+  color: rgb(255, 255, 255);
 }
+
+.menuDisplay ul a:hover{
+  border-bottom: 1px solid #d9d9d9;
+}
+
 
 
 
@@ -221,7 +320,15 @@ header nav ul li a{
 
 @media (max-width:768px){
 html{
-  font-size: 90%;
+  font-size: 85%;
+}
+
+#header{
+  height: auto;
+}
+
+#arrow2 {
+  display: none;
 }
 
   #navMenu{
@@ -232,7 +339,28 @@ html{
   }
   .CardBottomBox{
     flex-direction: column;
-    height: 170vh;
+   height: 90vh;
+  }
+
+  .gallery{
+    height: auto;
+    gap: 4rem;
+    margin-bottom: 2rem;
+  }
+
+
+
+  .imgAndP > p{
+    font-size: .6rem;
+  }
+
+  p{
+    text-align: center !important;
+  }
+  
+
+  .gallery img{
+    width: 40%;
   }
   .Testimonials{
     grid-template-columns: 1fr;
@@ -242,9 +370,7 @@ html{
     height: auto;
     padding: 2rem 0;
   }
-  .gallery{
-    grid-template-columns: repeat(2, 1fr);
-  }
+ 
   .ClientTestimonials h2{
     text-align: center;
     font-size: 120%;

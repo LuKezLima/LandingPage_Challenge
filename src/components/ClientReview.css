@@ -13,6 +13,11 @@
     border-radius: 50%;
 }
 
+#clientReview{
+    opacity: 1;
+    color: black;
+}
+
 .infoPerson{
     display: flex;
     flex-direction: column;

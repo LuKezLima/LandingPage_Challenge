@@ -29,15 +29,17 @@
     gap: 1.8rem;
 }
 
-.groupContent h2{
-    font-size: clamp(2.3rem, 2vw + .8rem, 3.5rem);
+.groupContent > h2{
+    font-size: clamp(2rem, 1.8vw + .7rem, 3.5rem);
     color: var(--Very-dark-desaturated-blue);
+    text-transform: uppercase;
 }
 
-.groupContent P {
-    color: #9e9d9d;
+.groupContent p {
+    color: #000000 !important;
     font-size: clamp(1rem, 1vw + .2rem, 2rem);
     line-height: 1.5rem;
+    text-align: left;
 }
 .groupContent a {
     color:var(--Very-dark-desaturated-blue);

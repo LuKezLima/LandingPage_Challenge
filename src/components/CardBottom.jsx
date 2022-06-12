@@ -4,7 +4,10 @@ import './CardBottom.css'
 export default ({bgImage, Title, Paragraph}) => {
     return(
         <div className='CardBottom' style={{
-            backgroundImage: `url(${bgImage})`
+            background: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(${bgImage})`,
+            backgroundPosition: 'center',
+            backgroundRepeat: 'no-repeat',
+            backgroundSize: 'cover',
         }}>
 
             <div className='contentCardBottom'>
