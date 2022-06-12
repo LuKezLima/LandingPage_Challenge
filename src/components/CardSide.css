@@ -52,6 +52,7 @@
     .CardSide{
         height: 90vh;
         flex-direction: column-reverse !important;
+        margin-block: 1rem;
     }
 
     .content{
